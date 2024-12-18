@@ -41,11 +41,11 @@ export default function overview() {
                         <ScheduleCard />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-4">
-                        <div className="navbar shadow rounded-lg col-span-7">
+                    <div className="flex gap-4">
+                        <div className="navbar shadow rounded-lg">
                             <CardPelatihan />
                         </div>
-                        <div className="navbar rounded-lg col-span-3 p-4">
+                        <div className="navbar rounded-lg p-4">
                             <Completionrate />
                         </div>
                     </div>
@@ -54,8 +54,8 @@ export default function overview() {
                         <RiwayatSertifikasi />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-2">
-                        <div className="col-span-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-11 gap-2">
+                        <div className="col-span-5">
                             <PelatihanMilik />
                         </div>
                         <div className="col-span-6">

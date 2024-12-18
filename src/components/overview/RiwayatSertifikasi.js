@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function RiwayatSertifikasi() {
   return (
     <div className="p-4">
-      <h3 className="py-3">
+      <h3 className="py-3 poppins-semibold">
         <b>Riwayat Sertifikasi yang Diikuti</b>
       </h3>
       <table className="w-full rounded-md">

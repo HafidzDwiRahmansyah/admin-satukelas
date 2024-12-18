@@ -86,28 +86,39 @@ const CalendarCard = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row navbar border-0 rounded-lg overflow-hidden max-w-4xl mx-auto">
+    <div className="flex flex-col lg:flex-row navbar border-0 rounded-lg overflow-hidden gap-2">
       {/* Kolom Kalender */}
-      <div className="w-full lg:w-1/2 p-6 navbar">
+      <div className="w-full p-6 navbar ms-4">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold text-lg">{getMonthYear(currentDate)}</h3>
+          <h3 className="poppins-bold">{getMonthYear(currentDate)}</h3>
           <div className="flex items-center content-align-center gap-5">
             <button
               onClick={handlePreviousMonth}
-              className="text-gray-500 hover:text-black">
-              &lt;
+              className="text-gray-500 hover:text-black poppins-bold fs-20">
+              <Image
+                alt="left icons"
+                src="/images/icons/left.svg"
+                width={24}
+                height={24}
+              />
             </button>
             <button
               onClick={handleNextMonth}
-              className="text-gray-500 hover:text-black">
-              &gt;
+              className="text-gray-500 hover:text-black poppins-bold fs-20">
+              <Image
+                alt="left icons"
+                src="/images/icons/right.svg"
+                width={24}
+                height={24}
+              />
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-7 text-center gap-2">
+        <hr className="py-2" />
+        <div className="grid grid-cols-7 gap-2">
           {/* Header Hari */}
           {["M", "S", "S", "R", "K", "J", "S"].map((day, index) => (
-            <span key={index} className="font-semibold text-gray-500">
+            <span key={index} className="font-semibold ps-4 text-gray-500">
               {day}
             </span>
           ))}
@@ -116,41 +127,39 @@ const CalendarCard = () => {
             const isToday =
               date && date.isCurrentMonth
                 ? `${currentDate.getFullYear()}-${String(
-                    currentDate.getMonth() + 1
-                  ).padStart(2, "0")}-${String(date.day).padStart(2, "0")}`
+                  currentDate.getMonth() + 1
+                ).padStart(2, "0")}-${String(date.day).padStart(2, "0")}`
                 : null;
 
             // Cek jika hari Minggu
             const isSunday = date
               ? new Date(
-                  currentDate.getFullYear(),
-                  currentDate.getMonth(),
-                  date.day
-                ).getDay() === 0
+                currentDate.getFullYear(),
+                currentDate.getMonth(),
+                date.day
+              ).getDay() === 0
               : false;
 
             // Cek jika tanggal memiliki jadwal
             const hasSchedule =
               date?.isCurrentMonth &&
               schedules[
-                `${currentDate.getFullYear()}-${String(
-                  currentDate.getMonth() + 1
-                ).padStart(2, "0")}-${String(date.day).padStart(2, "0")}`
+              `${currentDate.getFullYear()}-${String(
+                currentDate.getMonth() + 1
+              ).padStart(2, "0")}-${String(date.day).padStart(2, "0")}`
               ];
 
             return (
               <div
                 key={index}
                 onClick={() => handleDateClick(date?.day, date?.isCurrentMonth)}
-                className={`relative h-10 w-10 flex items-center justify-center rounded-full ${
-                  date?.isCurrentMonth
-                    ? "cursor-pointer hover:bg-blue-500 hover:text-white"
-                    : "text-gray-300"
-                } ${
-                  isToday === selectedDate && date?.isCurrentMonth
+                className={`relative h-10 w-10 flex items-center justify-center rounded-full ${date?.isCurrentMonth
+                  ? "cursor-pointer hover:bg-blue-500 hover:text-white"
+                  : "text-gray-300"
+                  } ${isToday === selectedDate && date?.isCurrentMonth
                     ? "border-2 border-blue-500 text-black"
                     : ""
-                } ${isSunday ? "text-red-500" : ""}`} // Warna merah untuk hari Minggu
+                  } ${isSunday ? "text-red-500" : ""}`} // Warna merah untuk hari Minggu
               >
                 {/* Tanggal */}
                 {date?.day || ""}
@@ -165,16 +174,16 @@ const CalendarCard = () => {
       </div>
 
       {/* Kolom Jadwal */}
-      <div className="w-full lg:w-1/2 p-6">
+      <div className="w-full p-6">
         <h3 className="font-semibold text-lg mb-4">
           Jadwal{" "}
           {selectedDate
             ? new Date(selectedDate).toLocaleDateString("id-ID", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
             : ""}
         </h3>
         <ul>
@@ -182,13 +191,25 @@ const CalendarCard = () => {
             schedules[selectedDate].map((schedule, index) => (
               <li
                 key={index}
-                className="flex items-center justify-between py-2 border-b">
-                <span>
-                  <span className="font-bold">{schedule.time}</span> |{" "}
-                  {schedule.title}
-                </span>
-                <a href="#" className="text-blue-500 hover:underline">
-                  {schedule.link}
+              >
+                <a href="#" className="flex items-center justify-between py-3" >
+                  <div className="flex items-center gap-2">
+                    <span className="h-10 w-1 bg-green-500 rounded-full"></span>
+                    <div>
+                      <p className="poppins-regular fs-14 text-gray-600">{schedule.time}<span className="px-1 text-gray-300">|</span>
+                        {schedule.title}
+                      </p>
+                      <p className="text-blue-600 poppins-semibold fs-14 hover:underline">
+                        {schedule.link}
+                      </p>
+                    </div>
+                  </div>
+                  <Image
+                    className="img-fluid items-center mx-end"
+                    alt="icons right"
+                    src="/images/icons/right-small.svg"
+                    width={16}
+                    height={16} />
                 </a>
               </li>
             ))
@@ -196,8 +217,8 @@ const CalendarCard = () => {
             <div className="flex items-center justify-center pt-8">
               <Image
                 className="img-fluid"
-                width={150}
-                height={150}
+                width={180}
+                height={180}
                 alt=""
                 src="/images/notclass.svg"
               />
