@@ -1,40 +1,17 @@
-"use client";
-import { notFound } from "next/navigation";
-
-import Link from "next/link";
 import Image from "next/image";
 
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
-
 import Judul from "@/components/manajemenpenugasan/Judulpenugasan/Judul";
 import Anggotaonline from "@/components/manajemenpenugasan/Judulpenugasan/Anggotaonline";
 import Daftarpelatihan from "@/components/manajemenpenugasan/Judulpenugasan/Daftarpelatihan";
 import Daftaranggota from "@/components/manajemenpenugasan/Judulpenugasan/Daftaranggota";
 
-interface DataItem {
-    slug: string;
-    title: string;
-    deadline: string;
-    tanggal: string;
-}
-
-const data: DataItem[] = [
-    { slug: "latihan-bahasa-inggris-bulanan", title: "Latihan Bahasa Inggris Bulanan", deadline: "12 Jan 2024 14.00", tanggal: "25 Des 2023 14.00" },
-    { slug: "latihan-softskill", title: "Latihan Softskill", deadline: "19 Jan 2024 14.00", tanggal: "9 Jan 2024 14.00" },
-];
-
-interface Params {
-    params: { slug: string };
-}
-
-export default function SlugPage({ params }: Params) {
-    const detailData = data.find((items) => items.slug === params.slug);
-
-    if (!detailData) {
-        notFound();
-    }
-
+// const data: DataItem[] = [
+//     { slug: "latihan-bahasa-inggris-bulanan", title: "Latihan Bahasa Inggris Bulanan", deadline: "12 Jan 2024 14.00", tanggal: "25 Des 2023 14.00" },
+//     { slug: "latihan-softskill", title: "Latihan Softskill", deadline: "19 Jan 2024 14.00", tanggal: "9 Jan 2024 14.00" },
+// ];
+export default function BahasaInggris() {
     return (
         <div className="flex">
             <Sidebar />
@@ -53,7 +30,7 @@ export default function SlugPage({ params }: Params) {
                             <p className="fs-30 mx-2">/</p>
                             <p className="fs-16 poppins-semibold">Manajemen Penugasan</p>
                             <p className="fs-30 mx-2">/</p>
-                            <p className="fs-16 poppins-semibold">{detailData.title}</p>
+                            <p className="fs-16 poppins-semibold">Latihan Bahasa Inggris Bulanan</p>
                         </div>
                     </div>
                 </div>
@@ -81,5 +58,6 @@ export default function SlugPage({ params }: Params) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
+
