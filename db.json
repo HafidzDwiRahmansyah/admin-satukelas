@@ -1,0 +1,122 @@
+{
+    "pelatihansatukelas": [
+        { "id": 1, "judul_pelatihan": "Business Strategy Development", "tipe": "Pelatihan", "kategori": "Manajemen SDM", "jumlah_materi": 5, "terdaftar": 5, "selesai": 14, "detail": "detail" },
+        { "id": 2, "judul_pelatihan": "Akutansi Perpajakan Pada Laporan Keuangan", "tipe": "Pelatihan", "kategori": "Perpajakan", "jumlah_materi": 8, "terdaftar": 5, "selesai": 5, "detail": "detail" },
+        { "id": 3, "judul_pelatihan": "Manajemen Penyelesaian Sengketa Pajak", "tipe": "Pelatihan", "kategori": "Perpajakan", "jumlah_materi": 10, "terdaftar": 9, "selesai": 6, "detail": "detail" },
+        { "id": 4, "judul_pelatihan": "Saksi dalam Hukum Pajak dan Peradilan Pajak", "tipe": "Webinar", "kategori": "Perpajakan", "jumlah_materi": 12, "terdaftar": 1, "selesai": 2, "detail": "detail" },
+        { "id": 5, "judul_pelatihan": "Building Self Confidence", "tipe": "Webinar", "kategori": "Soft Skills", "jumlah_materi": 11, "terdaftar": 0, "selesai": 1, "detail": "detail" }
+    ],
+
+    "daftarpenugasan": [
+        { "id": 1, "checkbox": "checkbox", "judul_penugasan": "Latihan Bahasa Inggris Bulanan", "jumlah_pelatihan": 10, "assigned": 50, "tanggal_penugasan": "25 Des 2023 14:00 WIB", "deadline": "12 Jan 2024 14:00 WIB", "status": "Berlangsung" },
+        { "id": 2, "checkbox": "checkbox", "judul_penugasan": "Latihan Soft Skill", "jumlah_pelatihan": 5, "assigned": 10, "tanggal_penugasan": "08 Jan 2024 14:00 WIB", "deadline": "19 Jan 2024 14:00 WIB", "status": "Berlangsung" },
+        { "id": 3, "checkbox": "checkbox", "judul_penugasan": "Tax Update", "jumlah_pelatihan": 5, "assigned": 5, "tanggal_penugasan": "07 Feb 2024 13:00 WIB", "deadline": "16 Feb 2024 13:00 WIB", "status": "Selesai" },
+        { "id": 4, "checkbox": "checkbox", "judul_penugasan": "Onboarding", "jumlah_pelatihan": 10, "assigned": 2, "tanggal_penugasan": "05 Feb 2024 13:00 WIB", "deadline": "12 Feb 2024 13:00 WIB", "status": "Belum Selesai" },
+        { "id": 5, "checkbox": "checkbox", "judul_penugasan": "Latihan Bahasa Inggris", "jumlah_pelatihan": 14, "assigned": 50, "tanggal_penugasan": "01 Jan 2024 13:00 WIB", "deadline": "08 Jan 2024 13:00 WIB", "status": "Terlambat" }
+    ],
+
+    "users": [
+        { "id": 1, "name": "Hafidz Dwi Rahmansyah", "email": "hafidzdwirahmansya@example.com" },
+        { "id": 2, "name": "Andi Setiawan", "email": "andi.setiawan@example.com" },
+        { "id": 3, "name": "Budi Santoso", "email": "budi.santoso@example.com" },
+        { "id": 4, "name": "Citra Dewi", "email": "citra.dewi@example.com" },
+        { "id": 5, "name": "Dika Pratama", "email": "dika.pratama@example.com" },
+        { "id": 6, "name": "Eko Susanto", "email": "eko.susanto@example.com" },
+        { "id": 7, "name": "Fani Oktaviani", "email": "fani.oktaviani@example.com" },
+        { "id": 8, "name": "Gita Ramadhani", "email": "gita.ramadhani@example.com" },
+        { "id": 9, "name": "Hendra Wijaya", "email": "hendra.wijaya@example.com" },
+        { "id": 10, "name": "Intan Puspitasari", "email": "intan.puspitasari@example.com" }
+    ],
+
+    "pelatihanyangdiikuti": [
+        { "id": 1, "name": "Gabriel Alfarizie", "judul": "Grammar - Responsibilities at work", "waktu": "23 Des 2023 15:00 WIB", "progres": "Selesai", "selesai": "-", "nilai": "40%" },
+        { "id": 2, "name": "Firkan Dinansyah", "judul": "Structure and Written Expression - Making plans", "waktu": "23 Des 2023 15:00 WIB", "progres": "80%", "selesai": "-", "nilai": "-" },
+        { "id": 3, "name": "Firkan Dinansyah", "judul": "Pajak Penghasilan (PPh) Pasal 22 - Brevet AB", "waktu": "23 Des 2023 15:00 WIB", "progres": "Selesai", "selesai": "-", "nilai": "20%" },
+        { "id": 4, "name": "Adhi Prasetyo", "judul": "Pajak Penghasilan (PPh) Orang Pribadi - Brevet AB", "waktu": "23 Des 2023 15:00 WIB", "progres": "50%", "selesai": "-", "nilai": "-" },
+        { "id": 5, "name": "Muhammad Fadhil", "judul": "Bea Meterai (BM) dan Bea Perolehan atas Hak Tanah dan Bangunan (BPHTB) - Brevet AB", "waktu": "23 Des 2023 15:00 WIB", "progres": "50%", "selesai": "-", "nilai": "-" }
+    ],
+
+    "liveclassyangdiikuti": [
+        { "id": 1, "name": "Adhi Prasetyo", "judul": "Kupas Tuntas PMK 172 dan Penerapannya", "rombel": "Tax", "tipe": "Webinar", "terdaftar": "20 Nov 2023 14:00", "pelaksanaan": "12 Jan 2024 09:00" },
+        { "id": 2, "name": "Firkan Dinansyah", "judul": "PPN", "rombel": "Creative Production", "tipe": "Webinar", "terdaftar": "20 Nov 2023 14:00", "pelaksanaan": "20 Nov 2023 14:00" },
+        { "id": 3, "name": "Adhi Prasetyo", "judul": "PPH 21", "rombel": "Tax", "tipe": "Webinar", "terdaftar": "20 Nov 2023 14:00", "pelaksanaan": "20 Nov 2023 14:00" },
+        { "id": 4, "name": "Yetti Ferdian", "judul": "Be Positive and Optimistic Thinking", "rombel": "Tax", "tipe": "Webinar", "terdaftar": "20 Nov 2023 14:00", "pelaksanaan": "20 Nov 2023 14:00" },
+        { "id": 5, "name": "Muhammad Fadhil", "judul": "PPH 21", "rombel": "Tax", "tipe": "Webinar", "terdaftar": "20 Nov 2023 14:00", "pelaksanaan": "20 Nov 2023 14:00" }
+    ],
+
+    "sertifikasi": [
+        { "id": 1, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Adhi Prasetyo", "rombel": "Tax", "pendaftaran": "23 Nov 2023 13:00 WIB", "status": "Lulus Ujian" },
+        { "id": 2, "judul": "TOEFL ITP Test Preparation", "anggota": "Firkan Dinansyah", "rombel": "Creative Production", "pendaftaran": "28 Nov 2023 10:00 WIB", "status": "15%" },
+        { "id": 3, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Muhammad Fadhil", "rombel": "Tax", "pendaftaran": "23 Sep 2023 13:00 WIB", "status": "Belum Lulus" },
+        { "id": 4, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Yetti Ferdian", "rombel": "Tax", "pendaftaran": "25 Sep 2023 12:13 WIB", "status": "Klaim CPTT/CTT" },
+        { "id": 5, "judul": "BNSP MSDM Lv. Staf", "anggota": "Firkan Dinansyah", "rombel": "Creative Production", "pendaftaran": "23 Sep 2023 13:42 WIB", "status": "15%" }
+    ],
+
+    "daftar_pelatihan": [
+        { "id": 1, "checkbox": "checkbox", "judul": "Grammar - Responsibilities at work", "kategori": "Bahasa Inggris" },
+        { "id": 2, "checkbox": "checkbox", "judul": "Listening - Office Jobs", "kategori": "Bahasa Inggris" },
+        { "id": 3, "checkbox": "checkbox", "judul": "Listening - Making Appointments", "kategori": "Bahasa Inggris" },
+        { "id": 4, "checkbox": "checkbox", "judul": "Grammar - Tell me about yourself", "kategori": "Bahasa Inggris" },
+        { "id": 5, "checkbox": "checkbox", "judul": "Grammar - Inquiring about a job", "kategori": "Bahasa Inggris" }
+    ],
+
+    "daftar_anggota": [
+        { "id": 1, "checkbox": "checkbox", "nama": "Gabriel Alfarizie", "progres": "10/10" },
+        { "id": 2, "checkbox": "checkbox", "nama": "Firkan Dinansyah", "progres": "10/10" },
+        { "id": 3, "checkbox": "checkbox", "nama": "Muammar Farouk", "progres": "6/10" },
+        { "id": 4, "checkbox": "checkbox", "nama": "Adhi Prasetyo", "progres": "6/10" },
+        { "id": 5, "checkbox": "checkbox", "nama": "Muhammad Fadhil", "progres": "10/10" }
+    ],
+
+    "anggota_perpajakan": [
+        { "id": 1, "nama": "Adhi Prasetyo", "terdaftar": "23 Des 2024", "progres": 15, "selesai": "23 Des 2024 14:00 WIB", "nilai": 50 },
+        { "id": 2, "nama": "Arifa Trinugraheni", "terdaftar": "23 Des 2024", "progres": "Selesai", "selesai": "23 Des 2024 14:00 WIB", "nilai": 50 },
+        { "id": 3, "nama": "Donita Primi Muliebris Witjaksono", "terdaftar": "23 Des 2024", "progres": 15, "selesai": "23 Des 2024 14:00 WIB", "nilai": 15 },
+        { "id": 4, "nama": "Firkan Dinansyah", "terdaftar": "23 Des 2024", "progres": 15, "selesai": "04 Mar 2024 14:00 WIB", "nilai": 50 },
+        { "id": 5, "nama": "Gabriel Alfarizie", "terdaftar": "23 Des 2024", "progres": "Selesai", "selesai": "04 Mar 2024 14:00 WIB", "nilai": 50 }
+    ],
+
+    "data_siswa_analitik": [
+        {
+            "id": 1,
+            "name": "Adhi Prasetyo",
+            "waktu": "23 Des 2024",
+            "progres": "15%",
+            "selesai": "23 Des 2024 14:00 WIB",
+            "nilai": "50%"
+        },
+        {
+            "id": 2,
+            "name": "Arifa Trinugraheni",
+            "waktu": "23 Des 2024",
+            "progres": "Selesai",
+            "selesai": "23 Des 2024 14:00 WIB",
+            "nilai": "50%"
+        },
+        {
+            "id": 3,
+            "name": "Donita Primi Muliebris Witjak...",
+            "waktu": "23 Des 2024",
+            "progres": "15%",
+            "selesai": "23 Des 2024 14:00 WIB",
+            "nilai": "15%"
+        },
+        {
+            "id": 4,
+            "name": "Firkan Dinansyah",
+            "waktu": "23 Des 2024",
+            "progres": "15%",
+            "selesai": "04 Mar 2024 14:00 WIB",
+            "nilai": "50%"
+        },
+        {
+            "id": 5,
+            "name": "Gabriel Alfarizie",
+            "waktu": "23 Des 2024",
+            "progres": "Selesai",
+            "selesai": "04 Mar 2024 14:00 WIB",
+            "nilai": "50%"
+        }
+    ]
+}
+
