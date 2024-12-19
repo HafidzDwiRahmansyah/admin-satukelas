@@ -1,50 +1,48 @@
 "use client";
-
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const centerTextPluginLiveClass = {
-    id: "centerTextLiveClass",
+const centerTextPlugin = {
+    id: "centerText",
     beforeDraw(chart) {
         const { width, height } = chart;
         const ctx = chart.ctx;
+        const text = "50%";
         ctx.save();
-
-        const text12 = "50"; // Angka untuk Live Class
-        ctx.font = "bold 20px Arial";
+        ctx.font = "poppins bold 40px";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = "#000";
-        ctx.fillText(text12, width / 2, height / 2 - 10);
-
-        const text22 = "Live Class"; // Label untuk Live Class
-        ctx.font = "normal 14px Arial";
-        ctx.fillStyle = "#666";
-        ctx.fillText(text22, width / 2, height / 2 + 15);
-
+        ctx.fillText(text, width / 2, height / 2);
         ctx.restore();
     },
 };
 
-ChartJS.register(centerTextPluginLiveClass);
+ChartJS.register(centerTextPlugin);
 
-export default function ChartClass() {
+export default function ChartKuota({ cutoutSize = "10%" }) {
     const data = {
-        labels: ["Selesai", "Belum Selesai"],
+        labels: ["50%", "50%"],
         datasets: [
             {
                 data: [50, 50],
-                backgroundColor: ["#4CAF50", "#007BFF"],
+                backgroundColor: ["#007bff", "rgba(0,0,0,0)"],
                 borderWidth: 0,
+                hoverOffset: 0,
+            },
+            {
+                data: [0, 50],
+                backgroundColor: ["rgba(0,0,0,0)", "rgba(214, 226, 245, 1)"],
+                borderWidth: 0,
+                cutout: "55%",
             },
         ],
     };
 
     const options = {
         responsive: true,
-        cutout: "70%",
         plugins: {
             legend: {
                 display: false,
@@ -53,11 +51,12 @@ export default function ChartClass() {
                 enabled: false,
             },
         },
+        cutout: cutoutSize,
     };
 
     return (
-        <div className="flex items-center justify-center w-40 h-40 rounded-full shadow-lg">
-            <Doughnut data={data} options={options} id="chartLiveClass" />
+        <div style={{ width: "100px", height: "100px" }}>
+            <Doughnut data={data} options={options} />
         </div>
     );
 }

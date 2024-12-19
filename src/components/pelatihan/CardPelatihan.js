@@ -66,7 +66,7 @@ export default function CardPelatihan() {
                 <div className="flex justify-between">
                   <div className="flex justify-end text-gray-500 fs-14 poppins-regular">
                     <p>Menampilkan</p>
-                    <button className="flex border border-gray-500 rounded-md px-1 mx-2">
+                    <button className="flex border border-gray-500 rounded-md items-center px-1 mx-2">
                       5
                       <Image
                         className="img-fluid pl-1"
@@ -104,7 +104,7 @@ export default function CardPelatihan() {
                         <td className="px-4 py-2">5</td>
                         <td className="px-4 py-2">23 Des 2024 14:00 WIB</td>
                         <td className="px-4 py-2">
-                          <button className="flex bg-blue-700 text-white rounded-md px-4 py-1">
+                          <button className="flex bg-blue-700 text-white rounded-md px-4 py-1 items-center">
                             Draft
                             <Image
                               className="img-fluid pl-1"
@@ -170,7 +170,7 @@ export default function CardPelatihan() {
                   </p>
                   <div className="flex justify-end text-gray-500 fs-14 poppins-regular">
                     <p>Menampilkan</p>
-                    <button className="flex border border-gray-500 rounded-md px-1 mx-2">
+                    <button className="flex border border-gray-500 rounded-md px-1 mx-2 items-center">
                       5
                       <Image
                         className="img-fluid pl-1"

@@ -13,7 +13,7 @@ export default function completionrate() {
         <Chartcr />
       </div>
 
-      <button className="mt-6 border border-blue-500 text-blue-500 font-medium px-2 py-1 mx-auto rounded-md hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 flex items-center justify-center">
+      <button className="mt-10 border border-blue-500 text-blue-500 font-medium px-2 py-1 mx-auto rounded-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

@@ -8,7 +8,7 @@ export default function PelatihanMilik() {
           <h3 className="poppins-bold fs-16">
             <b>Pelatihan Milik PT Satukelas Adhyapana Nusantara</b>
           </h3>
-          <button className="bg-white border border-blue-500 text-blue-500 rounded-md px-3 mt-3 poppins-semibold fs-14">
+          <button className="bg-white border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-md px-3 py-1 mt-3 poppins-semibold fs-14">
             Kelola Pelatihan
           </button>
           <div className="flex items-center justify-content-center lg:col-span-12 my-4">

@@ -1,11 +1,25 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const handleOutsideClick = (event) => {
+    if (!event.target.closest(".dropdown-trigger")) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
   return (
     <nav className="h-16 bg-white text-gray flex items-center shadow justify-between px-6 navbar">
       <Image
@@ -23,7 +37,7 @@ export default function Navbar() {
           alt=""
           src="/images/icons/notifikasi.svg"
         />
-        <li className="flex items-center relative">
+        <li className="flex items-center relative dropdown-trigger">
           <Image
             className="img-fluid mr-2"
             width={40}
@@ -50,14 +64,27 @@ export default function Navbar() {
             />
           </a>
           {isOpen && (
-            <ul className="absolute bg-white shadow-lg rounded-md right-0 z-50" style={{ width: "300px", margintop: "100px" }}>
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">Profil</li>
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">Profil Organisasi</li>
-              <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">Keluar</li>
+            <ul
+              className="absolute bg-white shadow-lg rounded-md right-0 z-50"
+              style={{
+                width: "300px",
+                top: "100%",
+                marginTop: "0.5rem",
+              }}
+            >
+              <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
+                Profil
+              </li>
+              <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
+                Profil Organisasi
+              </li>
+              <li className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
+                Keluar
+              </li>
             </ul>
           )}
         </li>
-      </ul >
-    </nav >
-  )
+      </ul>
+    </nav>
+  );
 }

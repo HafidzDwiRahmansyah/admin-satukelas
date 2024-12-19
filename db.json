@@ -52,6 +52,14 @@
         { "id": 5, "judul": "BNSP MSDM Lv. Staf", "anggota": "Firkan Dinansyah", "rombel": "Creative Production", "pendaftaran": "23 Sep 2023 13:42 WIB", "status": "15%" }
     ],
 
+    "riwayat_sertifikat": [
+        { "id": 1, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Adhi Prasetyo", "rombel": "Grup Pajak", "tanggal": "01 Jan 2023 12:00 WIB", "status": 15 },
+        { "id": 2, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Donita Primi Muliebris Witjaksono", "rombel": "Grup Pajak", "tanggal": "14 Des 2023 14:00 WIB", "status": "Belum Lulus" },
+        { "id": 3, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Firkan Dinansyah", "rombel": "Grup Pajak", "tanggal": "03 Des 2023 15:21 WIB", "status": "Lulus Ujian" },
+        { "id": 4, "judul": "Sertifikasi: Brevet Pajak AB", "anggota": "Gabriel Alfarizie", "rombel": "Grup Pajak", "tanggal": "10 Des 2023 14:00 WIB", "status": "Klaim CPTT/CTT" },
+        { "id": 5, "judul": "Sertifikasi: Brevet Pajak C", "anggota": "Muammar Farouk", "rombel": "Grup Pajak", "tanggal": "03 Des 2023 13:22 WIB", "status": "Sertifikat dalam pengiriman" }
+    ],
+
     "daftar_pelatihan": [
         { "id": 1, "checkbox": "checkbox", "judul": "Grammar - Responsibilities at work", "kategori": "Bahasa Inggris" },
         { "id": 2, "checkbox": "checkbox", "judul": "Listening - Office Jobs", "kategori": "Bahasa Inggris" },
@@ -77,46 +85,40 @@
     ],
 
     "data_siswa_analitik": [
-        {
-            "id": 1,
-            "name": "Adhi Prasetyo",
-            "waktu": "23 Des 2024",
-            "progres": "15%",
-            "selesai": "23 Des 2024 14:00 WIB",
-            "nilai": "50%"
-        },
-        {
-            "id": 2,
-            "name": "Arifa Trinugraheni",
-            "waktu": "23 Des 2024",
-            "progres": "Selesai",
-            "selesai": "23 Des 2024 14:00 WIB",
-            "nilai": "50%"
-        },
-        {
-            "id": 3,
-            "name": "Donita Primi Muliebris Witjak...",
-            "waktu": "23 Des 2024",
-            "progres": "15%",
-            "selesai": "23 Des 2024 14:00 WIB",
-            "nilai": "15%"
-        },
-        {
-            "id": 4,
-            "name": "Firkan Dinansyah",
-            "waktu": "23 Des 2024",
-            "progres": "15%",
-            "selesai": "04 Mar 2024 14:00 WIB",
-            "nilai": "50%"
-        },
-        {
-            "id": 5,
-            "name": "Gabriel Alfarizie",
-            "waktu": "23 Des 2024",
-            "progres": "Selesai",
-            "selesai": "04 Mar 2024 14:00 WIB",
-            "nilai": "50%"
-        }
+        { "id": 1, "name": "Adhi Prasetyo", "waktu": "23 Des 2024", "progres": "15%", "selesai": "23 Des 2024 14:00 WIB", "nilai": "50%" },
+        { "id": 2, "name": "Arifa Trinugraheni", "waktu": "23 Des 2024", "progres": "Selesai", "selesai": "23 Des 2024 14:00 WIB", "nilai": "50%" },
+        { "id": 3, "name": "Donita Primi Muliebris Witjaksono", "waktu": "23 Des 2024", "progres": "15%", "selesai": "23 Des 2024 14:00 WIB", "nilai": "15%" },
+        { "id": 4, "name": "Firkan Dinansyah", "waktu": "23 Des 2024", "progres": "15%", "selesai": "04 Mar 2024 14:00 WIB", "nilai": "50%" },
+        { "id": 5, "name": "Gabriel Alfarizie", "waktu": "23 Des 2024", "progres": "Selesai", "selesai": "04 Mar 2024 14:00 WIB", "nilai": "50%" },
+        { "id": 6, "name": "Hafiz Amrullah", "waktu": "23 Des 2024", "progres": "10%", "selesai": "04 Mar 2024 15:00 WIB", "nilai": "40%" },
+        { "id": 7, "name": "Ilham Pratama", "waktu": "23 Des 2024", "progres": "50%", "selesai": "04 Mar 2024 16:00 WIB", "nilai": "60%" },
+        { "id": 8, "name": "Jasmine Kusuma", "waktu": "23 Des 2024", "progres": "75%", "selesai": "04 Mar 2024 17:00 WIB", "nilai": "80%" },
+        { "id": 9, "name": "Kevin Dharma", "waktu": "23 Des 2024", "progres": "20%", "selesai": "04 Mar 2024 18:00 WIB", "nilai": "30%" },
+        { "id": 10, "name": "Luthfi Ardiyansyah", "waktu": "23 Des 2024", "progres": "Selesai", "selesai": "04 Mar 2024 19:00 WIB", "nilai": "100%" }
+    ],
+
+    "all_student": [
+        { "id": 1, "checkbox": "checkbox", "name": "Adhi Prasetyo", "email": "adhi@satukelas.com", "divisi": "Tax Learning", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 17:00 WIB" },
+        { "id": 2, "checkbox": "checkbox", "name": "Arifa Trinugraheni", "email": "arifa@satukelas.com", "divisi": "Creative Production", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 17:00 WIB" },
+        { "id": 3, "checkbox": "checkbox", "name": "Donita Primi Muliebris Witjaksono", "email": "donita@satukelas.com", "divisi": "Creative Production", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 17:00 WIB" },
+        { "id": 4, "checkbox": "checkbox", "name": "Firkan Dinansyah", "email": "firkan@satukelas.com", "divisi": "Creative Production", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "02 Feb 2024 15:00 WIB" },
+        { "id": 5, "checkbox": "checkbox", "name": "Gabriel Alfarizie", "email": "gabriel@satukelas.com", "divisi": "Human Capital", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "02 Feb 2024 15:00 WIB" },
+        { "id": 6, "checkbox": "checkbox", "name": "Hanna Pratama", "email": "hanna@satukelas.com", "divisi": "Tax Learning", "posisi": "Manager", "membership": "Satukelas 6 Bulan", "kadaluarsa": "15 Mar 2025 17:00 WIB", "terakhir_aktif": "01 Feb 2024 11:00 WIB" },
+        { "id": 7, "checkbox": "checkbox", "name": "Irfan Kurniawan", "email": "irfan@satukelas.com", "divisi": "IT Support", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 12:00 WIB" },
+        { "id": 8, "checkbox": "checkbox", "name": "Jihan Nur Halimah", "email": "jihan@satukelas.com", "divisi": "Creative Production", "posisi": "Intern", "membership": "Satukelas 6 Bulan", "kadaluarsa": "15 Jul 2024 17:00 WIB", "terakhir_aktif": "06 Feb 2024 16:00 WIB" },
+        { "id": 9, "checkbox": "checkbox", "name": "Kevin Santoso", "email": "kevin@satukelas.com", "divisi": "Tax Learning", "posisi": "Manager", "membership": "Satukelas 1 Tahun", "kadaluarsa": "10 Nov 2024 17:00 WIB", "terakhir_aktif": "05 Feb 2024 09:00 WIB" },
+        { "id": 10, "checkbox": "checkbox", "name": "Lina Aulia", "email": "lina@satukelas.com", "divisi": "Tax Learning", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 14:00 WIB" },
+        { "id": 11, "checkbox": "checkbox", "name": "Mila Kartika", "email": "mila@satukelas.com", "divisi": "Human Capital", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "10 Okt 2024 17:00 WIB", "terakhir_aktif": "03 Feb 2024 13:00 WIB" },
+        { "id": 12, "checkbox": "checkbox", "name": "Naufal Ahsan", "email": "naufal@satukelas.com", "divisi": "IT Support", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 15:00 WIB" },
+        { "id": 13, "checkbox": "checkbox", "name": "Olivia Gunawan", "email": "olivia@satukelas.com", "divisi": "Creative Production", "posisi": "Staff", "membership": "Satukelas 6 Bulan", "kadaluarsa": "15 Mei 2024 17:00 WIB", "terakhir_aktif": "05 Feb 2024 11:00 WIB" },
+        { "id": 14, "checkbox": "checkbox", "name": "Putra Santika", "email": "putra@satukelas.com", "divisi": "Tax Learning", "posisi": "Intern", "membership": "Satukelas 6 Bulan", "kadaluarsa": "20 Sep 2024 17:00 WIB", "terakhir_aktif": "06 Feb 2024 08:00 WIB" },
+        { "id": 15, "checkbox": "checkbox", "name": "Qori Rahmadani", "email": "qori@satukelas.com", "divisi": "Creative Production", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "02 Feb 2024 17:00 WIB" },
+        { "id": 16, "checkbox": "checkbox", "name": "Rani Adinda", "email": "rani@satukelas.com", "divisi": "Human Capital", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "02 Feb 2024 14:00 WIB" },
+        { "id": 17, "checkbox": "checkbox", "name": "Satria Dwi Utama", "email": "satria@satukelas.com", "divisi": "Tax Learning", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "03 Feb 2024 10:00 WIB" },
+        { "id": 18, "checkbox": "checkbox", "name": "Tari Ananda", "email": "tari@satukelas.com", "divisi": "Creative Production", "posisi": "Manager", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 16:30 WIB" },
+        { "id": 19, "checkbox": "checkbox", "name": "Umar Hasan", "email": "umar@satukelas.com", "divisi": "Human Capital", "posisi": "Intern", "membership": "Satukelas 6 Bulan", "kadaluarsa": "01 Apr 2024 17:00 WIB", "terakhir_aktif": "06 Feb 2024 17:00 WIB" },
+        { "id": 20, "checkbox": "checkbox", "name": "Vania Pramesti", "email": "vania@satukelas.com", "divisi": "IT Support", "posisi": "Staff", "membership": "Satukelas 1 Tahun", "kadaluarsa": "05 Jan 2025 17:00 WIB", "terakhir_aktif": "06 Feb 2024 12:00 WIB" }
     ]
+
 }
 

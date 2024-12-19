@@ -148,7 +148,7 @@ body {
   font-size: 48px !important;
 }
 
-.fs-40{
+.fs-40 {
   font-size: 40px !important;
 }
 
@@ -182,4 +182,28 @@ body {
 
 .fs-12 {
   font-size: 12px !important;
+}
+
+progress {
+  width: 100px !important;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 50px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #3b82f6;
+  border-radius: 50px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #3b82f6;
+  border-radius: 50px;
 }

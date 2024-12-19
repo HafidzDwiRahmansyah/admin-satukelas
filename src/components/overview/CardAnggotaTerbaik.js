@@ -5,7 +5,7 @@ export default function AnggotaTerbaik() {
     <div className="container d-flex justify-content-center align-items-center">
       <div className="card p-4 w-100" style={{ maxWidth: "700px" }}>
         <div className="card-body">
-          <h3 className="py-3 poppins-semibold">
+          <h3 className="pb-3 poppins-semibold">
             <b>Anggota Terbaik</b>
           </h3>
           <table className="min-w-full rounded">

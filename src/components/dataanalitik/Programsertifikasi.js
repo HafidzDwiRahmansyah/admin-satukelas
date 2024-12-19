@@ -15,7 +15,7 @@ export default function Cardpelatihandiikuti() {
 
     return (
         <section className="p-4">
-                <h2 className="poppins-semibold py-2 fs-16">Program Sertifikasi yang diikuti</h2>
+            <h2 className="poppins-semibold py-2 fs-16">Program Sertifikasi yang diikuti</h2>
             <div className="grid grid-cols-2 gap-4 items-center mb-4">
                 <div className="flex gap-4 items-center">
                     <input
@@ -87,7 +87,7 @@ export default function Cardpelatihandiikuti() {
                 </table>
             </div>
             <div className="flex justify-end">
-                
+
             </div>
         </section>
     )

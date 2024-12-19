@@ -4,7 +4,7 @@ export default function ContactSales() {
   return (
     <div className="card rounded-md bg-red-600 text-white max-h-[150px] m-2">
       <div className="card-body p-3">
-        <div className="flex items-center">
+        <div className="flex items-start">
           <div className="member text-center">
             <p className="fs-62 poppins-bold leading-none">10</p>
             <p className="fs-16 poppins-semibold">Membership</p>

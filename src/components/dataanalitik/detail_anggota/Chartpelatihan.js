@@ -5,62 +5,67 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// Plugin untuk menambahkan teks di tengah chart
-const centerTextPlugin = {
-    id: "centerText",
+// Plugin untuk teks tengah
+const centerTextPluginPelatihan = {
+    id: "centerTextPelatihan",
     beforeDraw(chart) {
+        if (chart.canvas.id !== "chartPelatihan") return;
+
         const { width, height } = chart;
         const ctx = chart.ctx;
         ctx.save();
 
+        // Bersihkan canvas
+        ctx.clearRect(0, 0, width, height);
+
         // Teks utama (angka)
-        const text1 = "36";
+        const text3 = "36";
         ctx.font = "bold 20px Arial";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = "#000";
-        ctx.fillText(text1, width / 2, height / 2 - 10);
+        ctx.fillText(text3, width / 2, height / 2 - 10);
 
         // Teks kedua (label)
-        const text2 = "Pelatihan";
+        const text4 = "Pelatihan";
         ctx.font = "normal 14px Arial";
         ctx.fillStyle = "#666";
-        ctx.fillText(text2, width / 2, height / 2 + 15);
+        ctx.fillText(text4, width / 2, height / 2 + 15);
 
         ctx.restore();
     },
 };
 
-ChartJS.register(centerTextPlugin);
+ChartJS.register(centerTextPluginPelatihan);
 
-export default function Chartpelatihan() {
-    const data = {
+export default function ChartPelatihan() {
+    const data2 = {
         labels: ["Selesai", "Belum Selesai"],
         datasets: [
             {
-                data: [50, 50], // Persentase data
-                backgroundColor: ["#4CAF50", "#007BFF"], // Warna hijau dan biru
+                data: [50, 50],
+                backgroundColor: ["#4CAF50", "#007BFF"],
                 borderWidth: 0,
             },
         ],
     };
 
-    const options = {
+    const options2 = {
         responsive: true,
-        cutout: "70%", // Ukuran lubang tengah
+        cutout: "70%",
         plugins: {
             legend: {
-                display: false, // Hilangkan legenda
+                display: false,
             },
             tooltip: {
-                enabled: false, // Hilangkan tooltip
+                enabled: false,
             },
         },
     };
 
     return (
-        <div className="flex items-center justify-center w-40 h-40 rounded-full shadow-lg">
-            <Doughnut data={data} options={options} />
+        <div className="flex items-center justify-center w-40 h-40 rounded-full shadow-lg m-4">
+            <Doughnut data={data2} options={options2} id="chartPelatihan" />
         </div>
     );
 }
