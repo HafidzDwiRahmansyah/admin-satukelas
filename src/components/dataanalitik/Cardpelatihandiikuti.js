@@ -5,6 +5,9 @@ import { useState, useEffect } from "react";
 export default function Cardpelatihandiikuti() {
 
     const [data, setData] = useState([]);
+    const [itemsPerPage, setItemsPerPage] = useState(5);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         fetch("/api/data")
@@ -12,6 +15,55 @@ export default function Cardpelatihandiikuti() {
             .then((data) => setData(data.pelatihanyangdiikuti))
             .catch((error) => console.error("error fetching data:", error));
     }, []);
+
+    const getStatusStyle = (status) => {
+        if (status === "Selesai") {
+            return "text-white bg-green-500";
+        }
+        return "text-gray-600";
+    };
+
+    const renderStatus = (status) => {
+        if (typeof status === 'number') {
+            const percentage = Math.min(Math.max(status, 0), 100);
+            return (
+                <div className="flex gap-2 items-center">
+                    <div className="text-center poppins-regular fs-14">{percentage}%</div>
+                </div>
+            );
+        } else {
+            return (
+                <span className={`rounded px-2 py-1 text-sm poppins-semibold ${getStatusStyle(status)}`}>
+                    {status}
+                </span>
+            );
+        }
+    };
+
+    const currentData = data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    const handleSelect = (value) => {
+        setItemsPerPage(value);
+        setCurrentPage(1); // Reset halaman ke 1 setelah mengubah items per page
+        setShowDropdown(false); // Menutup dropdown setelah memilih
+    };
+
+    const toggleDropdown = () => {
+        setShowDropdown((prev) => !prev); // Toggle dropdown open/close
+    };
+
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+
+    const changePage = (page) => {
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page);
+        }
+    };
+
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(i);
+    }
 
     return (
         <section className="p-4">
@@ -41,16 +93,45 @@ export default function Cardpelatihandiikuti() {
             <div className="flex justify-end">
                 <div className="flex justify-end text-gray-500 fs-14 poppins-regular">
                     <p>Menampilkan</p>
-                    <button className="flex border border-gray-500 rounded-md px-1 mx-2">
-                        5
-                        <Image
-                            className="img-fluid pl-1"
-                            alt="dorpdown"
-                            src="/images/icons/dropdown2.svg"
-                            width={14}
-                            height={14}
-                        />
-                    </button>
+                    <div className="relative">
+                        <button
+                            className="flex border border-gray-500 rounded-md px-1 mx-2 items-center"
+                            onClick={toggleDropdown}
+                        >
+                            {itemsPerPage}
+                            <Image
+                                className="img-fluid pl-1"
+                                alt="dropdown"
+                                src="/images/icons/dropdown2.svg"
+                                width={14}
+                                height={14}
+                            />
+                        </button>
+                        {showDropdown && (
+                            <div className="absolute right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-md">
+                                <ul className="text-sm">
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                        onClick={() => handleSelect(5)}
+                                    >
+                                        5
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                        onClick={() => handleSelect(10)}
+                                    >
+                                        10
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                        onClick={() => handleSelect(15)}
+                                    >
+                                        15
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
                     <p>data/halaman</p>
                 </div>
             </div>
@@ -70,7 +151,7 @@ export default function Cardpelatihandiikuti() {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((item, index) => (
+                        {currentData.map((item, index) => (
                             <tr key={item.id} className={index % 2 === 0 ? 'bg-blue-50' : 'bg-white'}>
                                 <td className="text-center py-2">
                                     {item.id}
@@ -80,7 +161,7 @@ export default function Cardpelatihandiikuti() {
                                     {item.judul.length > 31 ? item.judul.slice(0, 31) + "..." : item.judul}
                                 </td>
                                 <td className="px-4 py-2">{item.waktu}</td>
-                                <td className="px-4 py-2">{item.progres}</td>
+                                <td className="px-4 py-2">{renderStatus(item.progres)}</td>
                                 <td className="px-4 py-2">{item.selesai}</td>
                                 <td className="px-4 py-2">{item.nilai}</td>
                             </tr>
@@ -88,8 +169,38 @@ export default function Cardpelatihandiikuti() {
                     </tbody>
                 </table>
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-between items-center mt-4">
+                <p className="text-sm text-gray-600">
+                    Terdapat <b>{data.length} Pelatihan</b> yang diikuti
+                </p>
+                <div className="flex items-center gap-1">
+                    <button
+                        className="text-gray-600 rounded-md px-2 py-1 text-sm hover:bg-gray-300"
+                        onClick={() => changePage(currentPage - 1)}
+                        disabled={currentPage === 1}
+                    >
+                        &lt;
+                    </button>
 
+                    {pageNumbers.map((pageNumber) => (
+                        <button
+                            key={pageNumber}
+                            className={`${currentPage === pageNumber ? 'bg-blue-500 text-white' : 'text-gray-600'
+                                } rounded-md px-2 py-1 text-sm hover:bg-blue-600 hover:text-white`}
+                            onClick={() => changePage(pageNumber)}
+                        >
+                            {pageNumber}
+                        </button>
+                    ))}
+
+                    <button
+                        className="text-gray-600 rounded-md px-2 py-1 text-sm hover:bg-gray-300"
+                        onClick={() => changePage(currentPage + 1)}
+                        disabled={currentPage === totalPages} // Menonaktifkan tombol jika di halaman terakhir
+                    >
+                        &gt;
+                    </button>
+                </div>
             </div>
         </section>
     )

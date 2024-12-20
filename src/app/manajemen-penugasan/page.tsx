@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 
 import Notification from "@/components/manajemenpenugasan/Notification";
-import Chartmanajementugas from "@/components/manajemenpenugasan/Chartmanajementugas";
+import Statuschart from "@/components/manajemenpenugasan/Statuschart";
 import Daftarpenugasan from "@/components/manajemenpenugasan/Daftarpenugasan";
 
 export const metadata = {
@@ -32,13 +32,11 @@ export default function manajemenpenugasan() {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col ml-4">
+                <div className="flex gap-4 m-4">
+                    <div className="flex" style={{ width: "530px" }}>
                         <Notification />
                     </div>
-                    <div className="flex flex-col mr-4">
-                        <Chartmanajementugas />
-                    </div>
+                    <Statuschart />
                 </div>
                 <Daftarpenugasan />
             </div>
